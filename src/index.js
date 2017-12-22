@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
 import Videolist from './components/video_list';
 import YTSearch from 'youtube-api-search';
-const API_KEY = "AIzaSyD_UZQQV-OcpZyjL0ppWCLBGyFgqNpiytg";
+const API_KEY = "AIzaSyDKBmgA00qyh1sZregDUP3G-vNbZMUP5Qo";
 import VideoDetail from './components/videodetail';
 class App extends Component{
     constructor(props)
@@ -40,4 +40,9 @@ class App extends Component{
     }
 
 }
+var styles = {
+    blueBg: {
+        background: 'blue'
+    }
+};
 ReactDOM.render(<App/>,document.querySelector('.container'));

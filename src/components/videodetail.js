@@ -5,18 +5,17 @@ const VideoDetail=(props)=>{
             <p>loading....</p>
         );
     }
-    const url='https://www.youtube.com/embed/${props.video.id.videoId}'
+    const url='https://www.youtube.com/embed/'+props.video.id.videoId;
     console.log("props"+props);
     return(
-      <div>
-          <div>
-              <iframe src={url}/>
-          </div>
-          <div>
+        <div className="video-detail col-md-8">
+            <div className="embed-responsive embed-responsive-16by9">
+
+              <iframe allowFullScreen={"allowFullScreen"} src={url}/>
+            </div>
+          <div className="details">
               <p>{props.video.snippet.title}</p>
-          </div>
-          <div>
-              <p>{props.video.snippet.description}</p>
+
           </div>
       </div>
     );
